@@ -41,8 +41,13 @@ export default function MapBackground({ className = "" }) {
 
     const handleResize = () => map.invalidateSize();
     window.addEventListener("resize", handleResize);
+    // Re-measure after the parent settles (fonts, layout, animations).
+    const t1 = setTimeout(() => map.invalidateSize(), 100);
+    const t2 = setTimeout(() => map.invalidateSize(), 600);
 
     return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
       window.removeEventListener("resize", handleResize);
       map.remove();
       mapRef.current = null;
