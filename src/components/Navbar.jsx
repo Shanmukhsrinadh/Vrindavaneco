@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import Logo from "./Logo";
 import WhatsAppButton from "./WhatsAppButton";
 
 const NAV_LINKS = [
-  { href: "#products", label: "Products" },
-  { href: "#about", label: "About" },
-  { href: "#benefits", label: "Benefits" },
-  { href: "#process", label: "Process" },
-  { href: "#contact", label: "Contact" },
+  { hash: "products", label: "Products" },
+  { hash: "about", label: "About" },
+  { hash: "benefits", label: "Benefits" },
+  { hash: "process", label: "Process" },
+  { hash: "contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -23,22 +26,41 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  function handleNavClick(e, hash) {
+    setOpen(false);
+    if (pathname === "/") {
+      e.preventDefault();
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // Let react-router navigate; ScrollToHashOrTop handles the scroll.
+      e.preventDefault();
+      navigate(`/#${hash}`);
+    }
+  }
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
         scrolled
           ? "border-b border-leaf-100/70 bg-white/85 backdrop-blur-md"
-          : "bg-white/0"
+          : "bg-white/80 backdrop-blur-sm"
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between sm:h-20">
-        <Logo />
+        <Link to="/" aria-label="Vrindavan Eco Plates home">
+          <Logo />
+        </Link>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
+        <nav
+          className="hidden items-center gap-7 md:flex"
+          aria-label="Primary"
+        >
           {NAV_LINKS.map((l) => (
             <a
-              key={l.href}
-              href={l.href}
+              key={l.hash}
+              href={`/#${l.hash}`}
+              onClick={(e) => handleNavClick(e, l.hash)}
               className="text-sm font-medium text-bark-900/80 transition hover:text-leaf-700"
             >
               {l.label}
@@ -74,10 +96,10 @@ export default function Navbar() {
               <div className="rounded-2xl border border-leaf-100 bg-white p-3 shadow-lg shadow-leaf-100/40">
                 <ul className="flex flex-col">
                   {NAV_LINKS.map((l) => (
-                    <li key={l.href}>
+                    <li key={l.hash}>
                       <a
-                        href={l.href}
-                        onClick={() => setOpen(false)}
+                        href={`/#${l.hash}`}
+                        onClick={(e) => handleNavClick(e, l.hash)}
                         className="block rounded-xl px-4 py-3 text-base font-medium text-bark-900 hover:bg-leaf-50"
                       >
                         {l.label}
@@ -86,7 +108,9 @@ export default function Navbar() {
                   ))}
                 </ul>
                 <div className="mt-2 px-1 pb-1">
-                  <WhatsAppButton className="w-full">Order on WhatsApp</WhatsAppButton>
+                  <WhatsAppButton className="w-full">
+                    Order on WhatsApp
+                  </WhatsAppButton>
                 </div>
               </div>
             </div>

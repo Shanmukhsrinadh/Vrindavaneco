@@ -59,6 +59,38 @@
   to   { transform: translateX(-50%); }
 }
 
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom map pin (Leaflet) */
+.vp-map-pin { position: relative; }
+.vp-pin-dot {
+  position: absolute; top: 4px; left: 4px;
+  width: 14px; height: 14px; border-radius: 9999px;
+  background: #16a34a; border: 3px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+.vp-pin-pulse {
+  position: absolute; top: -2px; left: -2px;
+  width: 26px; height: 26px; border-radius: 9999px;
+  background: rgba(22,163,74,0.35);
+  animation: vpPulse 1.8s ease-out infinite;
+}
+@keyframes vpPulse {
+  0%   { transform: scale(0.6); opacity: 0.7; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.leaflet-container { background: #e8efe5; }
+.leaflet-control-attribution {
+  font-size: 10px;
+  background: rgba(255,255,255,0.7) !important;
+}
+
 .bg-grain {
   background-image:
     radial-gradient(rgba(46,125,68,0.06) 1px, transparent 1px),

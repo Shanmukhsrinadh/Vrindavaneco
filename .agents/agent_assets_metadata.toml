@@ -30,3 +30,63 @@ id = "lYuhv8o-fvBRWNGNEdxOb"
 uri = "file://src/assets/leaf-texture.png"
 type = "image"
 title = "leaf texture banner"
+
+[[generated]]
+id = "AHxsBvH4OdVwzzFm20d6r"
+uri = "file://src/assets/products/plate-square.png"
+type = "image"
+title = "square leaf plate"
+
+[[generated]]
+id = "Pl0jgum_HHVU9NZEg8zMp"
+uri = "file://src/assets/products/plate-small.png"
+type = "image"
+title = "small round leaf plate"
+
+[[generated]]
+id = "AdAfNSh98KPZ1hGxzH204"
+uri = "file://src/assets/products/bowl-large.png"
+type = "image"
+title = "large leaf bowl"
+
+[[generated]]
+id = "K7m3GRngSmi0xDgDeM96E"
+uri = "file://src/assets/products/bowl-dessert.png"
+type = "image"
+title = "dessert leaf bowl"
+
+[[generated]]
+id = "5A944beLhbzDOnyAfa1j_"
+uri = "file://src/assets/products/box-square.png"
+type = "image"
+title = "square takeaway box"
+
+[[generated]]
+id = "VotTn-GUtKu_aL2bnXeGg"
+uri = "file://src/assets/products/box-compartment.png"
+type = "image"
+title = "compartment takeaway box"
+
+[[generated]]
+id = "kZIWrhV78IYwXY0qZuH8J"
+uri = "file://src/assets/products/cutlery-set.png"
+type = "image"
+title = "wooden cutlery set"
+
+[[generated]]
+id = "1qStqy4-dum7mTXHBdX6N"
+uri = "file://src/assets/products/cutlery-spoon.png"
+type = "image"
+title = "wooden spoon"
+
+[[generated]]
+id = "-IkkxTLxwsn32UWyuZcIp"
+uri = "file://src/assets/products/cup-paper.png"
+type = "image"
+title = "kraft paper cup"
+
+[[generated]]
+id = "IbcX5E_WpuPuUOFhGincP"
+uri = "file://src/assets/products/cup-small.png"
+type = "image"
+title = "small paper cup"

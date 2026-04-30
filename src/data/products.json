@@ -1,0 +1,127 @@
+[
+  {
+    "id": "plate-round",
+    "name": "Round Leaf Plate",
+    "category": "plates",
+    "size": "10\" diameter",
+    "price": "From ₹1.80 / plate",
+    "image": "plate-round.png",
+    "tag": "Bestseller",
+    "featured": true,
+    "features": ["Sturdy 2-layer build", "Perfect for thalis & meals"]
+  },
+  {
+    "id": "plate-thali",
+    "name": "Compartment Thali",
+    "category": "plates",
+    "size": "4 sections",
+    "price": "From ₹3.50 / plate",
+    "image": "plate-thali.png",
+    "tag": "For events",
+    "featured": true,
+    "features": ["No mixing of curries", "Ideal for events & weddings"]
+  },
+  {
+    "id": "plate-square",
+    "name": "Square Leaf Plate",
+    "category": "plates",
+    "size": "9\" × 9\"",
+    "price": "From ₹2.20 / plate",
+    "image": "plate-square.png",
+    "features": ["Modern square shape", "Great for buffets & starters"]
+  },
+  {
+    "id": "plate-small",
+    "name": "Snack Plate",
+    "category": "plates",
+    "size": "8\" diameter",
+    "price": "From ₹1.20 / plate",
+    "image": "plate-small.png",
+    "features": ["Lightweight & sturdy", "Perfect for snacks & chaat"]
+  },
+  {
+    "id": "bowl-small",
+    "name": "Leaf Bowl",
+    "category": "bowls",
+    "size": "180 ml",
+    "price": "From ₹1.20 / piece",
+    "image": "bowl-small.png",
+    "featured": true,
+    "features": ["Leak-resistant", "Great for desserts & curries"]
+  },
+  {
+    "id": "bowl-large",
+    "name": "Serving Bowl",
+    "category": "bowls",
+    "size": "500 ml",
+    "price": "From ₹3.20 / piece",
+    "image": "bowl-large.png",
+    "tag": "New",
+    "features": ["Deep & roomy", "Holds rice, gravies & salads"]
+  },
+  {
+    "id": "bowl-dessert",
+    "name": "Dessert Cup",
+    "category": "bowls",
+    "size": "90 ml",
+    "price": "From ₹0.90 / piece",
+    "image": "bowl-dessert.png",
+    "features": ["Bite-sized", "Perfect for kheer, ice-cream"]
+  },
+  {
+    "id": "box-square",
+    "name": "Takeaway Box",
+    "category": "boxes",
+    "size": "750 ml",
+    "price": "From ₹4.50 / piece",
+    "image": "box-square.png",
+    "features": ["Microwave-safe bagasse", "Snug-fit lid included"]
+  },
+  {
+    "id": "box-compartment",
+    "name": "Meal Box (3 sections)",
+    "category": "boxes",
+    "size": "1000 ml",
+    "price": "From ₹6.20 / piece",
+    "image": "box-compartment.png",
+    "tag": "Cloud kitchens",
+    "features": ["3 separated compartments", "Leak-proof bagasse build"]
+  },
+  {
+    "id": "cutlery-set",
+    "name": "Wooden Cutlery Set",
+    "category": "cutlery",
+    "size": "Spoon · Fork · Knife",
+    "price": "From ₹3.00 / set",
+    "image": "cutlery-set.png",
+    "tag": "Combo",
+    "features": ["Smooth birch wood finish", "100% biodegradable"]
+  },
+  {
+    "id": "cutlery-spoon",
+    "name": "Wooden Spoon",
+    "category": "cutlery",
+    "size": "16 cm",
+    "price": "From ₹0.95 / piece",
+    "image": "cutlery-spoon.png",
+    "features": ["Splinter-free finish", "Great for desserts & dahi"]
+  },
+  {
+    "id": "cup-paper",
+    "name": "Kraft Paper Cup",
+    "category": "cups",
+    "size": "200 ml",
+    "price": "From ₹1.10 / cup",
+    "image": "cup-paper.png",
+    "features": ["No plastic lining", "Ideal for tea & coffee"]
+  },
+  {
+    "id": "cup-small",
+    "name": "Espresso Cup",
+    "category": "cups",
+    "size": "90 ml",
+    "price": "From ₹0.80 / cup",
+    "image": "cup-small.png",
+    "features": ["Compact & sturdy", "Perfect for chai & cutting"]
+  }
+]

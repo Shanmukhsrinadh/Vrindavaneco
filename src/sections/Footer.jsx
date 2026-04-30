@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import { FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
-import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone, FiExternalLink } from "react-icons/fi";
 import Logo from "../components/Logo";
-import { SITE, telLink, waLink } from "../data/site";
+import { SITE, telLink, waLink, mapOpenUrl } from "../data/site";
 
 export default function Footer() {
   return (
     <footer className="border-t border-leaf-100 bg-white">
       <div className="container-x grid gap-10 py-14 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <Logo />
+          <Link to="/" aria-label="Home">
+            <Logo />
+          </Link>
           <p className="mt-4 max-w-sm text-sm text-bark-700/80">
             Pure leaf-based plates and bowls, lovingly made by women artisans
             from the villages around Vrindavan.
@@ -46,10 +49,10 @@ export default function Footer() {
             Explore
           </h3>
           <ul className="mt-4 space-y-2.5 text-sm text-bark-700/80">
-            <li><a href="#products" className="hover:text-leaf-700">Products</a></li>
-            <li><a href="#about" className="hover:text-leaf-700">About us</a></li>
-            <li><a href="#benefits" className="hover:text-leaf-700">Benefits</a></li>
-            <li><a href="#process" className="hover:text-leaf-700">How it's made</a></li>
+            <li><Link to="/products" className="hover:text-leaf-700">All products</Link></li>
+            <li><Link to="/#about" className="hover:text-leaf-700">About us</Link></li>
+            <li><Link to="/#benefits" className="hover:text-leaf-700">Benefits</Link></li>
+            <li><Link to="/#process" className="hover:text-leaf-700">How it's made</Link></li>
           </ul>
         </div>
 
@@ -68,7 +71,17 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-3">
               <FiMapPin className="mt-0.5 text-leaf-700" />
-              <span>{SITE.city}</span>
+              <span>{SITE.address}</span>
+            </li>
+            <li>
+              <a
+                href={mapOpenUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-leaf-200 px-3 py-1.5 text-xs font-semibold text-leaf-700 transition hover:bg-leaf-600 hover:text-white"
+              >
+                Open in Maps <FiExternalLink />
+              </a>
             </li>
           </ul>
         </div>
