@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "7gT-CdgJao7pY5xTCtaxT"
+uri = "file://src/assets/hero-plate.png"
+type = "image"
+title = "hero leaf plate"
+
+[[generated]]
+id = "f5L1vhcNLEIDPinypgoib"
+uri = "file://src/assets/product-round-plate.png"
+type = "image"
+title = "round leaf plate"
+
+[[generated]]
+id = "9cktYpWoGju3xsbrFa3xg"
+uri = "file://src/assets/product-thali-plate.png"
+type = "image"
+title = "thali compartment plate"
+
+[[generated]]
+id = "7nTJyZ1Y7ILnO9-VSUByn"
+uri = "file://src/assets/product-leaf-bowl.png"
+type = "image"
+title = "small leaf bowl"
+
+[[generated]]
+id = "lYuhv8o-fvBRWNGNEdxOb"
+uri = "file://src/assets/leaf-texture.png"
+type = "image"
+title = "leaf texture banner"

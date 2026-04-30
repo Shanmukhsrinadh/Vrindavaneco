@@ -1,0 +1,108 @@
+Create a modern, high-conversion React frontend website for a local eco-friendly business called "Vrindavan Eco Plates".
+
+Project requirements:
+
+1. Tech Stack:
+
+* React (existing project structure)
+* Tailwind CSS for styling
+* Framer Motion for animations
+* React Icons for icons
+* Optional: lightweight Spline 3D embed (only if performance is not affected)
+
+2. Design Goals:
+
+* Mobile-first design
+* Fully responsive across all screen sizes
+* Fast loading and optimized performance
+* Clean UI with white as primary color and green as secondary color
+* Eco-friendly, minimal, modern aesthetic
+* Smooth animations, not overwhelming
+
+3. Business Context:
+
+* The business sells eco-friendly paper plates made with leaf layers (no plastic/polythene)
+* Highlight health benefits (no cancer risk from plastic)
+* Highlight eco-friendliness and sustainability
+* Target local customers and bulk buyers
+
+4. Conversion First (VERY IMPORTANT):
+
+* Sticky WhatsApp CTA button (floating)
+* Call Now button in hero section
+* "Order on WhatsApp" buttons throughout
+* Simple lead-focused layout (no unnecessary distractions)
+
+5. Sections to build:
+
+* Hero Section:
+
+  * Strong headline: eco-friendly + safe plates
+  * Subtext explaining benefits
+  * CTA buttons (Call + WhatsApp)
+  * Subtle 3D or motion effect (floating plate or soft animation)
+
+* Product Section:
+
+  * Show different plate types
+  * Clean cards with images
+  * Highlight features: biodegradable, safe, durable
+
+* About Section:
+
+  * Story of Vrindavan
+  * Why leaf-based plates are better than plastic-coated plates
+
+* Benefits Section:
+
+  * Eco-friendly
+  * Health-safe
+  * Durable
+  * Affordable
+
+* Process / How it's made (optional but good for trust)
+
+* Testimonials (even placeholder for now) flowing horizontally from left to right
+
+* Final CTA Section:
+
+  * Big WhatsApp button
+  * Clear call to action
+
+6. Animations:
+
+* Use Framer Motion for:
+
+  * Fade-in on scroll
+  * Smooth transitions
+  * Subtle hover effects
+* Optional scroll-based animation (plate moving down the page), but must not affect performance
+
+7. UX Rules:
+
+* Keep navigation simple
+* Sticky navbar
+* Fast interaction
+* Large buttons for mobile users
+
+8. SEO:
+
+* Use semantic HTML
+* Proper headings (H1, H2, etc.)
+* Meta title and description in index.html
+
+9. Folder Structure:
+
+* components/
+* sections/
+* assets/
+* pages/
+
+10. Output:
+
+* Clean, readable, reusable React components
+* Tailwind styling applied properly
+* Smooth user experience
+
+Important:
+Do NOT overuse heavy 3D libraries. Prioritize performance and conversions over visual complexity.
