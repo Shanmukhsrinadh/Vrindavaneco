@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiCheck, FiMapPin, FiExternalLink, FiPhone } from "react-icons/fi";
-import { SITE, mapOpenUrl, waLink, telLink } from "../data/site";
-import MapBackground from "../components/MapBackground";
+import { SITE, mapOpenUrl, mapEmbedUrl, waLink, telLink } from "../data/site";
 
 const POINTS = [
   "Free quote within minutes",
@@ -21,16 +20,22 @@ export default function FinalCTA() {
   return (
     <section
       id="contact"
-      className="relative isolate overflow-hidden py-16 sm:py-20 lg:py-24"
+      className="relative isolate overflow-hidden py-20 sm:py-24 lg:py-28"
     >
-      {/* Map background — sits underneath the green card */}
-      <MapBackground className="absolute inset-0 z-0 h-full w-full" />
+      {/* Real Google Maps iframe background (non-interactive) */}
+      <iframe
+        title={`Map showing ${SITE.name} location`}
+        src={mapEmbedUrl}
+        loading="eager"
+        referrerPolicy="no-referrer-when-downgrade"
+        aria-hidden="true"
+        tabIndex={-1}
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full border-0"
+      />
 
-      {/* Soft top + bottom fade so the section blends with the page */}
-      <div className="pointer-events-none absolute inset-0 z-[1]">
-        <div className="absolute top-0 left-0 h-28 w-full bg-gradient-to-b from-white to-transparent" />
-        <div className="absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-white to-transparent" />
-      </div>
+      {/* Strong white fades — top and bottom */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-32 bg-gradient-to-b from-white via-white/80 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-32 bg-gradient-to-t from-white via-white/80 to-transparent" />
 
       <div className="container-x relative z-10">
         <motion.div
@@ -38,7 +43,7 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl bg-gradient-to-br from-leaf-700 via-leaf-600 to-leaf-700 px-6 py-12 text-white shadow-2xl shadow-leaf-900/30 ring-1 ring-white/10 sm:px-10 sm:py-14 lg:px-14 lg:py-16"
+          className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-leaf-700/90 px-6 py-12 text-white shadow-2xl shadow-leaf-900/30 ring-1 ring-white/15 backdrop-blur-[2px] sm:px-10 sm:py-14 lg:px-14 lg:py-16"
         >
           {/* decorative blobs */}
           <div
